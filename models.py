@@ -6,3 +6,13 @@ class ProdutoDB(Base):
     nome = Column(String(100), nullable=False)
     preco = Column(Float, nullable=False)
     quantidade = Column(Integer, nullable=False)
+
+class LivroDB(Base):
+    __tablename__ = 'livro'
+    id = Column(Integer, primary_key=True, index=True)
+    titulo = Column(String(100), nullable=False)
+    autor = Column(String(100), nullable=False)
+    ano_publicacao = Column(String(100), nullable=False)
+    preco = Column(Float, nullable=False)
+    quantidade = Column(Integer, nullable=False)
+

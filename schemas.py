@@ -13,3 +13,19 @@ class ProdutoResponse(ProdutoBase):
 
 class Config:
     from_attributes = True 
+
+class LivroBase(BaseModel):
+    titulo: str
+    autor: str
+    ano_publicaco: int
+    preco: float
+    quantidade: int
+
+class LivroCreate(LivroBase):
+    pass
+
+class LivroResponse(LivroBase):
+    id: int
+
+class Config:
+    from_attributes = True 
