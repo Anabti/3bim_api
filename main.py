@@ -76,9 +76,9 @@ def obter_livro (livro_id: int, db: Session = Depends(get_db)):
         return livro 
 
 # DELETE /livro /{id} -> remove um livro  do banco de dados
-@app.delete('/livro /{produto_id}', status_code=204)
-def remover_livro (produto_id: int, db: Session = Depends(get_db)):
-    livro = db.query(LivroivroDB).filter(LivroDB.id == livro_id).first()
+@app.delete('/livro /{livro_id}', status_code=204)
+def remover_livro (livro_id: int, db: Session = Depends(get_db)):
+    livro = db.query(LivroDB).filter(LivroDB.id == livro_id).first()
     if livro  is None:
         raise HTTPException(status_code=404, detail='Livro  não encontrado')
     db.delete(livro)
@@ -86,7 +86,7 @@ def remover_livro (produto_id: int, db: Session = Depends(get_db)):
 
 @app.get('/livro ', response_model=list[LivroResponse])
 def listar_livro (db: Session = Depends(get_db)):
-    return db.query(Livro DB).all()
+    return db.query(LivroDB).all()
     
 @app.post('/livro ', response_model=LivroResponse, status_code=201)
 def criar_livro (livro: LivroCreate, db: Session = Depends(get_db)):
