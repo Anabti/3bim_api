@@ -9,3 +9,7 @@ _pycache_/
 
 #Arquivos de ambiente ( Caso usem futuramente)
 .env
+
+#Testes unitários 
+htmlcov/
+.coverage

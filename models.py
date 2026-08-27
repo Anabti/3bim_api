@@ -8,11 +8,11 @@ class ProdutoDB(Base):
     quantidade = Column(Integer, nullable=False)
 
 class LivroDB(Base):
-    __tablename__ = 'livro'
+    __tablename__ = 'livros'
     id = Column(Integer, primary_key=True, index=True)
     titulo = Column(String(100), nullable=False)
     autor = Column(String(100), nullable=False)
-    ano_publicacao = Column(String(100), nullable=False)
+    ano_publicacao = Column(Integer, nullable=False)
     preco = Column(Float, nullable=False)
     quantidade = Column(Integer, nullable=False)
 

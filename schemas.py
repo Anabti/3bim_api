@@ -17,7 +17,7 @@ class Config:
 class LivroBase(BaseModel):
     titulo: str
     autor: str
-    ano_publicaco: int
+    ano_publicacao: int
     preco: float
     quantidade: int
 
